@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th2 19, 2025 lúc 07:00 AM
+-- Thời gian đã tạo: Th2 20, 2025 lúc 08:24 AM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -45,6 +45,15 @@ INSERT INTO `chitiet_khuyenmai` (`MASACH`, `MAKM`) VALUES
 ('SC0018', 1),
 ('SC0020', 2),
 ('SC0013', 3),
+('SC0017', 4),
+('SC0001', 1),
+('SC0005', 2),
+('SC0010', 3),
+('SC0015', 4),
+('SC0008', 5),
+('SC0018', 1),
+('SC0020', 2),
+('SC0013', 3),
 ('SC0017', 4);
 
 -- --------------------------------------------------------
@@ -63,6 +72,16 @@ CREATE TABLE `chitiet_nxb` (
 --
 
 INSERT INTO `chitiet_nxb` (`MASACH`, `MANXB`) VALUES
+('SC0011', 'NXB001'),
+('SC0012', 'NXB002'),
+('SC0003', 'NXB003'),
+('SC0004', 'NXB004'),
+('SC0015', 'NXB005'),
+('SC0006', 'NXB001'),
+('SC0007', 'NXB002'),
+('SC0018', 'NXB003'),
+('SC0009', 'NXB004'),
+('SC0010', 'NXB005'),
 ('SC0011', 'NXB001'),
 ('SC0012', 'NXB002'),
 ('SC0003', 'NXB003'),
@@ -98,6 +117,11 @@ INSERT INTO `chi_tiet_don_hang` (`MaDH`, `MaSach`, `SoLuongCTDH`, `DonGia`, `Tra
 ('DH20240205002', 'SC0003', 1, 270000.00, 'Đã xác nhận', 'Giao sau 18h, xin cảm ơn!'),
 ('DH20240210003', 'SC0005', 3, 153333.00, 'Đang giao', 'Không cần bọc quà.'),
 ('DH20240215004', 'SC0007', 1, 520000.00, 'Hoàn thành', 'Cảm ơn shop, dịch vụ rất tốt!'),
+('DH20240220005', 'SC0009', 2, 95000.00, 'Hủy', 'Đặt nhầm, mong shop thông cảm.'),
+('DH20240201001', 'SC0001', 2, 175000.00, 'Chờ xác nhận', 'Gói hàng cẩn thận giúp mình.'),
+('DH20240205002', 'SC0003', 1, 270000.00, 'Đã xác nhận', 'Giao sau 18h, xin cảm ơn!'),
+('DH20240210003', 'SC0005', 3, 153333.00, 'Đang giao', 'Không cần bọc quà.'),
+('DH20240215004', 'SC0007', 1, 520000.00, 'Hoàn thành', 'Cảm ơn shop, dịch vụ rất tốt!'),
 ('DH20240220005', 'SC0009', 2, 95000.00, 'Hủy', 'Đặt nhầm, mong shop thông cảm.');
 
 -- --------------------------------------------------------
@@ -127,6 +151,16 @@ INSERT INTO `chi_tiet_phieu_nhap` (`MaPN`, `MaSach`, `SoLuongCTPN`, `DonGia`) VA
 (4, 'SC0012', 35, 92000.00),
 (4, 'SC0013', 15, 150000.00),
 (5, 'SC0008', 50, 78000.00),
+(5, 'SC0016', 45, 102000.00),
+(1, 'SC0001', 50, 75000.00),
+(1, 'SC0002', 30, 82000.00),
+(2, 'SC0015', 20, 115000.00),
+(2, 'SC0010', 40, 90000.00),
+(3, 'SC0015', 60, 67000.00),
+(3, 'SC0020', 25, 135000.00),
+(4, 'SC0012', 35, 92000.00),
+(4, 'SC0013', 15, 150000.00),
+(5, 'SC0008', 50, 78000.00),
 (5, 'SC0016', 45, 102000.00);
 
 -- --------------------------------------------------------
@@ -147,6 +181,16 @@ CREATE TABLE `chi_tiet_phieu_xuat` (
 --
 
 INSERT INTO `chi_tiet_phieu_xuat` (`MaPX`, `MaSach`, `SoLuongCTPX`, `DonGia`) VALUES
+(1, 'SC0011', 10, 120000.00),
+(1, 'SC0012', 5, 85000.00),
+(2, 'SC0015', 8, 130000.00),
+(2, 'SC0010', 12, 95000.00),
+(3, 'SC0015', 15, 70000.00),
+(3, 'SC0002', 10, 140000.00),
+(4, 'SC0005', 7, 99000.00),
+(4, 'SC0003', 3, 160000.00),
+(5, 'SC0008', 9, 82000.00),
+(5, 'SC0019', 6, 110000.00),
 (1, 'SC0011', 10, 120000.00),
 (1, 'SC0012', 5, 85000.00),
 (2, 'SC0015', 8, 130000.00),
@@ -207,6 +251,26 @@ CREATE TABLE `don_gia` (
 --
 
 INSERT INTO `don_gia` (`DonGia`, `masach`) VALUES
+(75000.00, 'SC0001'),
+(85000.00, 'SC0002'),
+(65000.00, 'SC0003'),
+(70000.00, 'SC0004'),
+(50000.00, 'SC0005'),
+(80000.00, 'SC0006'),
+(90000.00, 'SC0007'),
+(75000.00, 'SC0008'),
+(95000.00, 'SC0009'),
+(120000.00, 'SC0010'),
+(99000.00, 'SC0011'),
+(89000.00, 'SC0012'),
+(95000.00, 'SC0013'),
+(87000.00, 'SC0014'),
+(91000.00, 'SC0015'),
+(99000.00, 'SC0016'),
+(105000.00, 'SC0017'),
+(98000.00, 'SC0018'),
+(115000.00, 'SC0019'),
+(89000.00, 'SC0020'),
 (75000.00, 'SC0001'),
 (85000.00, 'SC0002'),
 (65000.00, 'SC0003'),
@@ -314,9 +378,9 @@ CREATE TABLE `khach_hang` (
 --
 
 INSERT INTO `khach_hang` (`MaTK`, `Email`, `MatKhau`, `HoTen`, `SDT`, `DiaChi`) VALUES
-(1, 'anth@gmail.com', 'd41d8cd98f00b204e9800998ecf8427e', 'Nguyễn Thụy Hoàng Anh\r\n', '2003-12-28', 'Phường 3, Thành Phố Vĩnh Long'),
-(2, 'quynhnkn@gmail.com', '$2y$10$MPk0IhTt9XRh04pR4oQZN.ZFsHDO2Fy4CO8qHallkixilnWSieq7e', 'Ngô Kế Như Quỳnh', '2004-04-30', 'Tỉnh Tiền Giang'),
-(3, 'vydt@gmail.com', '$2y$10$..BrWEUJfVilzlr1xQP/tOaAeXViCRtH3.TspULGYbZCBW335ExA6', 'Đường Thảo Vy', '2004-07-09', 'TP Ngã Sáu, tỉnh Hậu Giang');
+(1, 'anth@gmail.com', 'd41d8cd98f00b204e9800998ecf8427e', 'Nguyễn Thụy Hoàng Anh\r\n', '0123456789', 'Phường 3, Thành Phố Vĩnh Long'),
+(2, 'quynhnkn@gmail.com', '$2y$10$MPk0IhTt9XRh04pR4oQZN.ZFsHDO2Fy4CO8qHallkixilnWSieq7e', 'Ngô Kế Như Quỳnh', '0987654321', 'Tỉnh Tiền Giang'),
+(3, 'vydt@gmail.com', '$2y$10$..BrWEUJfVilzlr1xQP/tOaAeXViCRtH3.TspULGYbZCBW335ExA6', 'Đường Thảo Vy', '0135792468', 'TP Ngã Sáu, tỉnh Hậu Giang');
 
 --
 -- Bẫy `khach_hang`
@@ -517,7 +581,7 @@ CREATE TABLE `sach` (
   `MoTa` text DEFAULT NULL,
   `NgonNgu` varchar(100) DEFAULT NULL,
   `NamXB` year(4) DEFAULT NULL,
-  `Hinh` varchar(100) DEFAULT NULL,
+  `Hinh` varchar(1280) DEFAULT NULL,
   `MaTG` char(5) DEFAULT NULL,
   `MaTL` char(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
@@ -527,26 +591,26 @@ CREATE TABLE `sach` (
 --
 
 INSERT INTO `sach` (`MaSach`, `TenSach`, `MoTa`, `NgonNgu`, `NamXB`, `Hinh`, `MaTG`, `MaTL`) VALUES
-('SC0001', 'Cho Tôi Xin Một Vé Đi Tuổi Thơ', 'Câu chuyện kể về tuổi thơ đầy màu sắc và những kỷ niệm khó quên của nhân vật chính.', 'Tiếng Việt', '2008', NULL, 'TG001', 'TL009'),
-('SC0002', 'Dế Mèn Phiêu Lưu Ký', 'Câu chuyện nổi tiếng về chuyến phiêu lưu của chú dế mèn thông minh, gan dạ.', 'Tiếng Việt', '1941', NULL, 'TG003', 'TL009'),
-('SC0003', 'Tắt Đèn', 'Một tác phẩm phản ánh xã hội thực dân nửa phong kiến và cuộc sống khốn khó của nông dân Việt Nam.', 'Tiếng Việt', '1939', NULL, 'TG005', 'TL005'),
-('SC0004', 'Số Đỏ', 'Tiểu thuyết châm biếm nổi tiếng, miêu tả xã hội thành thị nửa Tây hóa đầu thế kỷ 20.', 'Tiếng Việt', '1936', NULL, 'TG006', 'TL014'),
-('SC0005', 'Chí Phèo', 'Câu chuyện bi kịch của một người nông dân nghèo bị xã hội tha hóa.', 'Tiếng Việt', '1941', NULL, 'TG004', 'TL005'),
-('SC0006', 'Mắt Biếc', 'Một tác phẩm lãng mạn sâu lắng về tình yêu tuổi học trò.', 'Tiếng Việt', '1990', NULL, 'TG001', 'TL009'),
-('SC0007', 'Tôi Thấy Hoa Vàng Trên Cỏ Xanh', 'Một câu chuyện về những ngày tháng tuổi thơ tuyệt đẹp.', 'Tiếng Việt', '2010', NULL, 'TG001', 'TL009'),
-('SC0008', 'Những Ngày Thơ Ấu', 'Cuốn tự truyện nổi tiếng về tuổi thơ đầy khó khăn và cảm động.', 'Tiếng Việt', '1941', NULL, 'TG022', 'TL009'),
-('SC0009', 'Đất Rừng Phương Nam', 'Một câu chuyện phiêu lưu giàu chất thơ của cậu bé An trên vùng đất Nam Bộ.', 'Tiếng Việt', '1957', NULL, 'TG021', 'TL009'),
-('SC0010', 'Harry Potter và Hòn Đá Phù Thủy', 'Tác phẩm mở đầu cho loạt truyện đình đám về thế giới phù thủy của Harry Potter.', 'Tiếng Anh', '1997', NULL, 'TG011', 'TL003'),
-('SC0011', '1984', 'Một kiệt tác văn học về chủ nghĩa toàn trị và kiểm soát tư tưởng.', 'Tiếng Anh', '1949', NULL, 'TG012', 'TL006'),
-('SC0012', 'Rừng Na Uy', 'Một câu chuyện đẹp về tình yêu, tuổi trẻ và nỗi cô đơn.', 'Tiếng Nhật', '1987', NULL, 'TG013', 'TL013'),
-('SC0013', 'Chiến Tranh và Hòa Bình', 'Một sử thi đồ sộ về thời kỳ chiến tranh Napoléon tại nước Nga.', 'Tiếng Nga', '0000', NULL, 'TG014', 'TL006'),
-('SC0014', 'Trăm Năm Cô Đơn', 'Một tác phẩm vĩ đại của chủ nghĩa hiện thực huyền ảo về gia đình Buendía.', 'Tiếng Tây Ban Nha', '1967', NULL, 'TG015', 'TL001'),
-('SC0015', 'Kiêu Hãnh và Định Kiến', 'Một tác phẩm kinh điển về tình yêu và tầng lớp quý tộc Anh.', 'Tiếng Anh', '0000', NULL, 'TG016', 'TL013'),
-('SC0016', 'Những Cuộc Phiêu Lưu của Tom Sawyer', 'Câu chuyện về cậu bé Tom tinh nghịch và đầy phiêu lưu.', 'Tiếng Anh', '0000', NULL, 'TG017', 'TL009'),
-('SC0017', 'Tội Ác và Hình Phạt', 'Một trong những tiểu thuyết kinh điển về tội lỗi và sự chuộc tội.', 'Tiếng Nga', '0000', NULL, 'TG018', 'TL006'),
-('SC0018', 'Chúa Tể Những Chiếc Nhẫn', 'Bộ tiểu thuyết giả tưởng huyền thoại về cuộc chiến chống lại bóng tối.', 'Tiếng Anh', '1954', NULL, 'TG019', 'TL003'),
-('SC0019', 'IT', 'Một câu chuyện kinh dị rùng rợn về tên hề Pennywise.', 'Tiếng Anh', '1986', NULL, 'TG020', 'TL004'),
-('SC0020', 'Bến Xe', 'Thứ tôi có thể cho em trong cuộc đời này chỉ là danh dự trong sạch và một tương lai tươi đẹp mà thôi. Thế nhưng, nếu chúng ta có kiếp sau, nếu kiếp sau tôi có đôi mắt sáng, tôi sẽ ở bến xe này… đợi em.', 'Tiếng Việt', '2020', NULL, 'TG023', 'TL012');
+('SC0001', 'Cho Tôi Xin Một Vé Đi Tuổi Thơ', 'Câu chuyện kể về tuổi thơ đầy màu sắc và những kỷ niệm khó quên của nhân vật chính.', 'Tiếng Việt', '2008', 'sc0001.jpg', 'TG001', 'TL009'),
+('SC0002', 'Dế Mèn Phiêu Lưu Ký', 'Câu chuyện nổi tiếng về chuyến phiêu lưu của chú dế mèn thông minh, gan dạ.', 'Tiếng Việt', '1941', 'sc0002.jpg', 'TG003', 'TL009'),
+('SC0003', 'Tắt Đèn', 'Một tác phẩm phản ánh xã hội thực dân nửa phong kiến và cuộc sống khốn khó của nông dân Việt Nam.', 'Tiếng Việt', '1939', 'sc0003.jpg', 'TG005', 'TL005'),
+('SC0004', 'Số Đỏ', 'Tiểu thuyết châm biếm nổi tiếng, miêu tả xã hội thành thị nửa Tây hóa đầu thế kỷ 20.', 'Tiếng Việt', '1936', 'sc0004.jpg', 'TG006', 'TL014'),
+('SC0005', 'Chí Phèo', 'Câu chuyện bi kịch của một người nông dân nghèo bị xã hội tha hóa.', 'Tiếng Việt', '1941', 'sc0005.jpg', 'TG004', 'TL005'),
+('SC0006', 'Mắt Biếc', 'Một tác phẩm lãng mạn sâu lắng về tình yêu tuổi học trò.', 'Tiếng Việt', '1990', 'sc0006.jpg', 'TG001', 'TL009'),
+('SC0007', 'Tôi Thấy Hoa Vàng Trên Cỏ Xanh', 'Một câu chuyện về những ngày tháng tuổi thơ tuyệt đẹp.', 'Tiếng Việt', '2010', 'sc0007.jpg', 'TG001', 'TL009'),
+('SC0008', 'Những Ngày Thơ Ấu', 'Cuốn tự truyện nổi tiếng về tuổi thơ đầy khó khăn và cảm động.', 'Tiếng Việt', '1941', 'sc0008.jpg', 'TG022', 'TL009'),
+('SC0009', 'Đất Rừng Phương Nam', 'Một câu chuyện phiêu lưu giàu chất thơ của cậu bé An trên vùng đất Nam Bộ.', 'Tiếng Việt', '1957', 'sc0009.jpg', 'TG021', 'TL009'),
+('SC0010', 'Harry Potter và Hòn Đá Phù Thủy', 'Tác phẩm mở đầu cho loạt truyện đình đám về thế giới phù thủy của Harry Potter.', 'Tiếng Anh', '1997', 'sc0010.jpg', 'TG011', 'TL003'),
+('SC0011', '1984', 'Một kiệt tác văn học về chủ nghĩa toàn trị và kiểm soát tư tưởng.', 'Tiếng Anh', '1949', 'SC0011.jpg', 'TG012', 'TL006'),
+('SC0012', 'Rừng Na Uy', 'Một câu chuyện đẹp về tình yêu, tuổi trẻ và nỗi cô đơn.', 'Tiếng Nhật', '1987', 'sc0012.jpg', 'TG013', 'TL013'),
+('SC0013', 'Chiến Tranh và Hòa Bình', 'Một sử thi đồ sộ về thời kỳ chiến tranh Napoléon tại nước Nga.', 'Tiếng Nga', '0000', 'SC0013.jpg', 'TG014', 'TL006'),
+('SC0014', 'Trăm Năm Cô Đơn', 'Một tác phẩm vĩ đại của chủ nghĩa hiện thực huyền ảo về gia đình Buendía.', 'Tiếng Tây Ban Nha', '1967', 'sc0014.jpg', 'TG015', 'TL001'),
+('SC0015', 'Kiêu Hãnh và Định Kiến', 'Một tác phẩm kinh điển về tình yêu và tầng lớp quý tộc Anh.', 'Tiếng Anh', '0000', 'sc0015.jpg', 'TG016', 'TL013'),
+('SC0016', 'Những Cuộc Phiêu Lưu của Tom Sawyer', 'Câu chuyện về cậu bé Tom tinh nghịch và đầy phiêu lưu.', 'Tiếng Anh', '0000', 'sc0016.jpg', 'TG017', 'TL009'),
+('SC0017', 'Tội Ác và Hình Phạt', 'Một trong những tiểu thuyết kinh điển về tội lỗi và sự chuộc tội.', 'Tiếng Nga', '0000', 'sc0017.jpg', 'TG018', 'TL006'),
+('SC0018', 'Chúa Tể Những Chiếc Nhẫn', 'Bộ tiểu thuyết giả tưởng huyền thoại về cuộc chiến chống lại bóng tối.', 'Tiếng Anh', '1954', 'sc0018.jpg', 'TG019', 'TL003'),
+('SC0019', 'IT', 'Một câu chuyện kinh dị rùng rợn về tên hề Pennywise.', 'Tiếng Anh', '1986', 'SC0019.jpg', 'TG020', 'TL004'),
+('SC0020', 'Bến Xe', 'Thứ tôi có thể cho em trong cuộc đời này chỉ là danh dự trong sạch và một tương lai tươi đẹp mà thôi. Thế nhưng, nếu chúng ta có kiếp sau, nếu kiếp sau tôi có đôi mắt sáng, tôi sẽ ở bến xe này… đợi em.', 'Tiếng Việt', '2020', 'SC0020.jpg', 'TG023', 'TL012');
 
 --
 -- Bẫy `sach`
